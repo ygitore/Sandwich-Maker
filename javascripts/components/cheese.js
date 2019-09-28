@@ -22,9 +22,23 @@ const getSelectedCheese = ()=>{
        for (let j = 0; j < cheeses.length; j++) {
            if(selectedCheckBoxes[i].checked && selectedCheckBoxes[i].id === cheeses[j].id){
                selectedCheese.push(cheeses[j]);
+               selectedCheckBoxes[i].checked = false;
             }           
        }        
     }  
     return selectedCheese;
 }
+const addSelectedCheesesToDom = ()=>{
+    const cheesesSelected = getSelectedCheese();
+    let cheesesList = '<div id = "all-Cheeses">';
+    for (let i = 0; i < cheesesSelected.length; i++) {
+        cheesesList +=`
+            <p>Cheese: ${cheesesSelected[i].name}</p>
+            <p>Price: ${cheesesSelected[i].price}</p>
+        `;  
+    }    
+    cheesesList +='</div>';
+    utilities.printToDom('my-cheese-selection', cheesesList);
+}
+document.body.addEventListener('keyup', addSelectedCheesesToDom);
 export default{ printCheeseOptions, getSelectedCheese };
