@@ -17,7 +17,6 @@ const createOrderButtonEvent = ()=>{
         }
         utilities.printToDom('sandwichs', domString2);
     };
-
     createFinalorder();
 };
 const printOrderOption = ()=>{ 
