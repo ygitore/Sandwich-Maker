@@ -1,14 +1,13 @@
 
 import utilities from '../helpers/utilities.js';
-const sandwich = [{id: "sandwich1", name: "Bacon sandwich", price: 40},
-    {id: "sandwich2", name: "Beef sandwich", price: 12},
-    {id: "sandwich3", name: "Chicken sandwich", price: 89},
-    {id: "sandwich4", name: "Tuna sandwich", price: 45}
+const sandwich = [{id: "sandwich1", name: "Bacon", price: 40},
+    {id: "sandwich2", name: "Beef", price: 12},
+    {id: "sandwich3", name: "Chicken", price: 89},
+    {id: "sandwich4", name: "Tuna", price: 45}
 ];
-
 const getSelectedSandwich = ()=>{
     const selectedSandwich = [];
-    const allSandwich = document.getElementsByClassName('meat');
+    const allSandwich = document.getElementsByClassName('sandwich');
     for (let i = 0; i < allSandwich.length; i++) {
         for (let j = 0; j < sandwich.length; j++) {
             if(allSandwich[i].checked && allSandwich[i].id === sandwich[j].id){
@@ -33,12 +32,11 @@ const addSelectedSandwichToDom = ()=>{
     const sandwichesSelected = getSelectedSandwich();
     let sandwichList = '<div id = "all-sandwich">';
     for (let i = 0; i < sandwichesSelected.length; i++) {
-        sandwichList +=`
-            <p>Sandwich: ${sandwichesSelected[i].name}</p>
-            <p>Price: ${sandwichesSelected[i].price}</p>`;  
+        sandwichList +=`<p>Sandwich: ${sandwichesSelected[i].name}</p>
+                        <p>Price: ${sandwichesSelected[i].price}</p>`  
     }    
     sandwichList +='</div>';
-    utilities.printToDom('my-sandwich-selection', sandwichList);
+    utilities.printToDom('sandwich-selection', sandwichList);
 }
 document.body.addEventListener('keyup', addSelectedSandwichToDom);
-export default{ printSandwichOptions };
+export default{ printSandwichOptions,getSelectedSandwich };

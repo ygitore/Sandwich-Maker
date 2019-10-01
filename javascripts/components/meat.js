@@ -31,14 +31,12 @@ const printMeatOptions = ()=>{
 };
 const addSelectedMeatToDom = ()=>{
     const meatsSelected = getSelectedMeat();
-    let meatList = '<div id = "all-meat">';
+    let meatList = '';
     for (let i = 0; i < meatsSelected.length; i++) {
-        meatList +=`
-            <p>Meat: ${meatsSelected[i].name}</p>
-            <p>Price: ${meatsSelected[i].price}</p>`;  
+        meatList +=`<p>Meat: ${meatsSelected[i].name}</p>
+                    <p>Price: ${meatsSelected[i].price}</p>`
     }    
-    meatList +='</div>';
-    utilities.printToDom('my-meat-selection', meatList);
+    utilities.printToDom('meat-selection', meatList);
 }
 document.body.addEventListener('keyup', addSelectedMeatToDom);
-export default{ printMeatOptions };
+export default{ printMeatOptions,getSelectedMeat };

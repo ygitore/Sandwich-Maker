@@ -1,8 +1,8 @@
 import utilities from '../helpers/utilities.js';
-const breads = [{id: "bread1", name: "Potato-bread", price: 90},
-    {id: "bread2", name: "Brown bread", price: 12},
-    {id: "bread3", name: "Banana bread", price: 89},
-    {id: "bread4", name: "Whole wheat bread", price: 45}
+const breads = [{id: "bread1", name: "Potato", price: 90},
+    {id: "bread2", name: "Brown", price: 12},
+    {id: "bread3", name: "Banana", price: 89},
+    {id: "bread4", name: "Wheat", price: 45}
 ];
 
 const printBreadOptions = ()=>{
@@ -39,8 +39,8 @@ const addBreadToDom = ()=>{
         <p>${breadSelected[i].price}</p>`;        
     }
     breadString +='</div>';
-    utilities.printToDom('my-bread-selection', breadString);
+    utilities.printToDom('bread-selection', breadString);
 
 }
 document.body.addEventListener('keyup',addBreadToDom);
-export default{ printBreadOptions };
+export default{ printBreadOptions, getSelectedBread };
