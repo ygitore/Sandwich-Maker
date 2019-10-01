@@ -8,3 +8,15 @@ h1{
     margin-top: 20px;
     margin-bottom: 10px;
 }
+.you-selected{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+#btn-click-order{
+    border-radius: 15px;
+    margin-left: 10px;
+    text-align: center;
+}

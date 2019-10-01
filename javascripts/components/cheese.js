@@ -38,7 +38,7 @@ const addSelectedCheesesToDom = ()=>{
         `;  
     }    
     cheesesList +='</div>';
-    utilities.printToDom('my-cheese-selection', cheesesList);
+    utilities.printToDom('cheese-selection', cheesesList);
 }
 document.body.addEventListener('keyup', addSelectedCheesesToDom);
 export default{ printCheeseOptions, getSelectedCheese };
