@@ -13,7 +13,6 @@ const getSelectedMeat = ()=>{
         for (let j = 0; j < meats.length; j++) {
             if(allMeat[i].checked && allMeat[i].id === meats[j].id){
                 selectedMeat.push(meats[j]);
-                allMeat[i].checked = false;
             }
         }
     }

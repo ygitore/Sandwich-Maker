@@ -1,8 +1,8 @@
 import utilities from '../helpers/utilities.js';
 const cheeses = [{id: "cheese1", name: "Swiss", price: 50},
-{id: "cheese2", name: "Provolone", price: 12},
-{id: "cheese3", name: "Muenster", price: 67},
-{id: "cheese4", name: "Sharp Cheddar", price: 35}
+{id: "cheese2", name: "Yellow", price: 12},
+{id: "cheese3", name: "American", price: 67},
+{id: "cheese4", name: "Muenester", price: 35}
 ];
 const printCheeseOptions = ()=>{
     let domString = '<h4>Cheese</h4>';

@@ -17,6 +17,9 @@ h1{
 }
 #btn-click-order{
     border-radius: 15px;
-    margin-left: 10px;
+    margin-left: 15px;
     text-align: center;
+}
+.order-result{
+    margin: 15px;
 }
