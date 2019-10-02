@@ -22,7 +22,6 @@ const getSelectedCheese = ()=>{
        for (let j = 0; j < cheeses.length; j++) {
            if(selectedCheckBoxes[i].checked && selectedCheckBoxes[i].id === cheeses[j].id){
                selectedCheese.push(cheeses[j]);
-               selectedCheckBoxes[i].checked = false;
             }           
        }        
     }  

@@ -5,23 +5,8 @@ import selectedSandwichs from './sandwich.js';
 import selectedMeat from './meat.js';
 import selectedVeggies from './veggies.js';
 import utilities from '../helpers/utilities.js';
-const createOrderButtonEvent = ()=>{
-    const cheeses = selectedCheeses.getSelectedCheese();
-    const breads = selectedBreads.getSelectedBread();
-    const veggies = selectedVeggies.getSelectedVeggies();
-    
-    console.log('veggies is working',veggies);
-    const condiments = selectedcondiments.getSelectedCondiments();
-    console.log(condiments.name);
-    const meat = selectedMeat.getSelectedMeat();
-    const sandwich = selectedSandwichs.getSelectedSandwich();
-    const finalPrice = [].concat(cheeses,breads,veggies,condiments,meat,sandwich);
-    console.log(finalPrice.length);
-    createFinalorder(finalPrice);
-}
 
-const createFinalorder = (items)=>{
-    console.log('is working',items);
+const createFinalorder = (items)=>{    
     let domStringResult = '';
     let sum=0;
     for (let i = 0; i < items.length; i++) {
@@ -30,7 +15,27 @@ const createFinalorder = (items)=>{
     domStringResult += `<h6>$ ${sum/100}</h6>`;
     utilities.printToDom('final-order', domStringResult);
 };
-  
+const createOrderButtonEvent = ()=>{
+    const cheeses = selectedCheeses.getSelectedCheese();
+    const breads = selectedBreads.getSelectedBread();
+    const veggies = selectedVeggies.getSelectedVeggies();
+    const condiments = selectedcondiments.getSelectedCondiments();
+    const meat = selectedMeat.getSelectedMeat();
+    const sandwich = selectedSandwichs.getSelectedSandwich();
+    const finalPrice = [].concat(cheeses,breads,veggies,condiments,meat,sandwich);
+    createFinalorder(finalPrice);
+    resetSelection();
+}
+
+const resetSelection = () =>{
+    //get all of checkboxes 
+    const resetCheckbox = document.getElementsByClassName('form-check-input');
+    //loop all of them 
+    //set checked to false
+    for (let i = 0; i < resetCheckbox.length; i++) {
+        resetCheckbox[i].checked = false;        
+    }    
+}
 const printOrderOption = ()=>{ 
     const orderString = `<button type="submit" class="btn-info"id = "btn-click-order">Order Now</button>`;
     utilities.printToDom('final-order',orderString)

@@ -25,7 +25,6 @@ const getSelectedBread =()=>{
         for (let j = 0; j < breads.length; j++) {
             if(allBread[i].checked && allBread[i].id === breads[j].id){
                 selectedBread.push(breads[j]);
-                allBread[i].checked = false;
             }
         }
     }
