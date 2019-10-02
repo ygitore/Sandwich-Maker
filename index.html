@@ -1,45 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sandwich Maker</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/main.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Sandwich Maker</h1>
-        <div class="row justify-content-center">
-            <div class="col-2">
-                <div id="condiments-container" id="condimentsId"></div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Sandwich Maker</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="./styles/main.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Sandwich Maker</h1>
+            <div class="row justify-content-center">
+                <div class="col-2">
+                    <div id="condiments-container" id="condimentsId"></div>
+                </div>
+                <div class="col-2">
+                    <div id="meat-container"></div>
+                </div>
+                <div class="col-2">
+                    <div id="cheese-container" id="cheeseId"></div>
+                </div>
+                <div class="col-2">
+                    <div id="bread-container" id="breadId"></div>
+                </div>  
+                <div class="col-2">
+                    <div id="sandwich-container" id="sandwichId"></div>
+                </div>
+                <div class="col-2">
+                    <div id="veggies-container" id="veggiesId"></div>
+                </div>
             </div>
-            <div class="col-2">
-                <div id="meat-container"></div>
+            <p class="you-selected">You selected</p>
+            <hr>            
+            <div class="row justify-content-center">
+                    <div class="col-2">
+                        <div id="condiments-selection" id="condimentsId">
+                            <h6>Condiments</h6>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div id="meat-selection">
+                            <h6>Meat</h6>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div id="cheese-selection">
+                            <h6>Cheese</h6>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div id="bread-selection">
+                            <h6>Bread</h6>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div id="sandwich-selection">
+                            <h6>Sandwich</h6>
+                        </div>
+                    </div>  
+                    <div class="col-2">
+                        <div id="veggies-selection">
+                            <h6>Veggies</h6>
+                        </div>
+                    </div>          
             </div>
-            <div class="col-2">
-                <div id="cheese-container" id="cheeseId"></div>
+            <hr>
+            <div class="row">
+                <div id="final-order"></div>
+                <div id="my-order"></div>
             </div>
-            <div class="col-2">
-                <div id="bread-container" id="breadId"></div>
-            </div>  
-            <div class="col-2">
-                <div id="sandwich-container" id="sandwichId"></div>
-            </div>
-            <div class="col-2">
-                <div id="veggies-container" id="veggiesId"></div>
-            </div>
+            
         </div>
-        <div class="row">
-            <div class="col-12 d-flex justify-content-center">
-                <div id="sandwichs"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div id="final-order"></div>
-        </div>
-    </div>
-    <script type = "module" src="javascripts/main.js"></script>
-</body>
+        <script type = "module" src="javascripts/main.js"></script>
+    </body>
 </html>
