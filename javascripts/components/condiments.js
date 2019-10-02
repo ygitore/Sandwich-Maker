@@ -22,10 +22,10 @@ const getSelectedCondiments = ()=>{
     for (let i = 0; i < allCondiments.length; i++) {
         for (let j = 0; j < condiment.length; j++) {
             if(allCondiments[i].checked && allCondiments[i].id === condiment[j].id){
-                selectedCondiments.push(condiment[j]);
-                allCondiments[i].checked = false;
+                selectedCondiments.push(condiment[j]); 
             }
         }
+        
     }
     return selectedCondiments;
 }

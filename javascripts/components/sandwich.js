@@ -12,7 +12,6 @@ const getSelectedSandwich = ()=>{
         for (let j = 0; j < sandwich.length; j++) {
             if(allSandwich[i].checked && allSandwich[i].id === sandwich[j].id){
                 selectedSandwich.push(sandwich[j]);
-                allSandwich[i].checked = false;
             }
         }
     }
@@ -28,6 +27,10 @@ const printSandwichOptions = ()=>{
     }
     utilities.printToDom('sandwich-container',domString1);
 };
+const checkIfKeyPressed = (e)=>{
+    if(e.target.id === 13){
+    }
+}
 const addSelectedSandwichToDom = ()=>{
     const sandwichesSelected = getSelectedSandwich();
     let sandwichList = '<div id = "all-sandwich">';
