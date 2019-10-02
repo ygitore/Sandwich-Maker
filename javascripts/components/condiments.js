@@ -1,8 +1,8 @@
 import utilities from '../helpers/utilities.js';
 const condiment = [{id: "condiment1", name: "Mayonnaise", price: 50},
-{id: "condiment2", name: "Wasabi Mayonnaise", price: 12},
-{id: "condiment3", name: "Hoisin Sauce", price: 67},
-{id: "condiment4", name: "Tonkatsu Sauce", price: 35}
+{id: "condiment2", name: "Ketchup", price: 12},
+{id: "condiment3", name: "Honey Mustard", price: 67},
+{id: "condiment4", name: "Hot Sauce", price: 35}
 ];
 
 const printCondimentsOptions = ()=>{

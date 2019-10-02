@@ -11,8 +11,9 @@ const createFinalorder = (items)=>{
     let sum=0;
     for (let i = 0; i < items.length; i++) {
         sum += items[i].price;
+        console.log(i+' --> '+sum);
     }
-    domStringResult += `<h6>$ ${sum/100}</h6>`;
+    domStringResult += `<h6 class="order-result">Your total is: $${sum/100}</h6>`;
     utilities.printToDom('final-order', domStringResult);
 };
 const createOrderButtonEvent = ()=>{
