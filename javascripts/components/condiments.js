@@ -22,6 +22,26 @@ const getSelectedCondiments = ()=>{
     for (let i = 0; i < allCondiments.length; i++) {
         for (let j = 0; j < condiment.length; j++) {
             if(allCondiments[i].checked && allCondiments[i].id === condiment[j].id){
+                selectedCondiments.push(condiment[j]);
+            }
+        }
+    }
+    return selectedCondiments;
+}
+
+const addCondimentsToDom = ()=>{
+    const condimentsSelected = getSelectedCondiments();
+    let condimentsString = '<div id = "bread-String">';
+    for (let i = 0; i < condimentsSelected.length; i++) {
+        condimentsString += `<p>Condiments:${condimentsSelected[i].name}</p> 
+        <p>Price: ${condimentsSelected[i].price}</p>`;        
+    }
+    condimentsString +='</div>';
+    utilities.printToDom('my-condiments-selection', condimentsString);
+
+}
+document.body.addEventListener('keyup',addCondimentsToDom);
+export default{ printCondimentsOptions };
                 selectedCondiments.push(condiment[j]); 
             }
         }
